@@ -7,9 +7,8 @@ export default function Ons({formData, setFormData}){
         ...formData.ons,
         [selected]: !formData.ons[selected]
       },
-      totalOnsPrice: formData.monthly == false ? formData.totalOnsPrice + price : formData.totalOnsPrice + (price * 10)
-    })
-    console.log(e.target.name);
+      totalOnsPrice: formData.ons[selected] == false ? formData.monthly == false ? formData.totalOnsPrice + price : formData.totalOnsPrice + (price * 10) : formData.monthly == false ? formData.totalOnsPrice - price : formData.totalOnsPrice - (price * 10)
+    });
   }
 
   return(

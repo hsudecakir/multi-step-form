@@ -24,6 +24,7 @@ function App() {
     },
     totalOnsPrice: 0
   });
+  console.log(formData);
   const [isConfirmed, setIsConfirmed] = useState(false);
   const [required, setRequired] = useState([]);
 
